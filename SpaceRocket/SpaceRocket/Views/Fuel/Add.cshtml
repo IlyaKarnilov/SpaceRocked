@@ -1,0 +1,40 @@
+﻿@model SpaceRocket.Models.FuelViewModel
+
+<h1 class="mt-5">Add new fuel</h1>
+
+<form method="post" action="Add">
+    <div class="row">
+        <div class="col">
+            <label for="Name" class="form-label">Name</label>
+            <input type="text" class="form-control" placeholder="Name" aria-label="Name" asp-for="Name">
+        </div>
+        <div class="col">
+            <label for="WeightPerCubicMeter" class="form-label">Weight Per Cubic Meter</label>
+            <input type="number" class="form-control" placeholder="WeightPerCubicMeter" aria-label="WeightPerCubicMeter" asp-for="WeightPerCubicMeter">
+        </div>
+        <div class="col">
+            <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+    </div>
+</form>
+
+<h1 class="mt-5">Fuel Table</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>WeightPerCubicMeter</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var fuel in Model.Fuels)
+        {
+            <tr>
+                <td>@fuel.Name</td>
+                <td>@fuel.WeightPerCubicMeter</td>
+                <td><a href="../Fuel/View/@fuel.Id"> View </a></td>
+            </tr>
+        }
+    </tbody>
+</table>

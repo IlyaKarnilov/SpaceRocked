@@ -1,0 +1,47 @@
+﻿@model SpaceRocket.Models.HeadModuleViewModel
+
+<h1 class="mt-5">Add Head Module</h1>
+
+<form method="post" action="Add">
+    <div class="row">
+        <div class="col">
+            <label for="Name" class="form-label">Name</label>
+            <input type="text" class="form-control" placeholder="Name" aria-label="Name" asp-for="Name">
+        </div>
+        <div class="col">
+            <label for="CrewCount" class="form-label">Crew Count</label>
+            <input type="number" class="form-control" placeholder="CrewCount" aria-label="CrewCount" asp-for="CrewCount">
+        </div>
+        <div class="col">
+            <label for="Weight" class="form-label">Weight</label>
+            <input type="number" class="form-control" placeholder="Weight" aria-label="Weight" asp-for="Weight">
+        </div>
+        <div class="col">
+            <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+    </div>
+</form>
+
+<h1 class="mt-5">Head Module Table</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Crew Count</th>
+            <th>Weight</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var headModule in Model.headModules)
+        {
+            <tr>
+                <td>@headModule.Name</td>
+                <td>@headModule.CrewCount</td>
+                <td>@headModule.Weight</td>
+                <td><a href="../HeadModule/View/@headModule.Id"> View </a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,85 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SpaceRocket
+build_property.RootNamespace = SpaceRocket
+build_property.ProjectDir = D:\repos\SpaceRocket\SpaceRocket\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\repos\SpaceRocket\SpaceRocket
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/repos/SpaceRocket/SpaceRocket/Views/Engine/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5naW5lXEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/SpaceRocket/SpaceRocket/Views/Engine/View.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5naW5lXFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/SpaceRocket/SpaceRocket/Views/Fuel/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVlbFxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/SpaceRocket/SpaceRocket/Views/Fuel/View.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVlbFxWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/SpaceRocket/SpaceRocket/Views/HeadModule/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVhZE1vZHVsZVxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/SpaceRocket/SpaceRocket/Views/HeadModule/View.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVhZE1vZHVsZVxWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/SpaceRocket/SpaceRocket/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/SpaceRocket/SpaceRocket/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/SpaceRocket/SpaceRocket/Views/Rocket/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9ja2V0XEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/SpaceRocket/SpaceRocket/Views/Rocket/View.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9ja2V0XFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/SpaceRocket/SpaceRocket/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/SpaceRocket/SpaceRocket/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/SpaceRocket/SpaceRocket/Views/Tank/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFua1xBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/SpaceRocket/SpaceRocket/Views/Tank/View.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFua1xWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/SpaceRocket/SpaceRocket/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/SpaceRocket/SpaceRocket/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/SpaceRocket/SpaceRocket/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-c9jkqejr1w

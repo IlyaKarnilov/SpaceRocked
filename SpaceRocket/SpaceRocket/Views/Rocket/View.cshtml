@@ -1,0 +1,45 @@
+﻿@using SpaceRocket.Models.EditViewModels;
+@model EditRocketViewModel
+
+<h1 class="mt-5">Edit Rocket</h1>
+<form method="post" action="View">
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Heag Module</label>
+        <select class="form-control" asp-for="HeadModuleName" asp-items="@(new SelectList(Model.HeadModules, "Name", "Name"))">
+            <option value="">Select HeadModule</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Tank</label>
+        <select class="form-control" asp-for="TankName" asp-items="@(new SelectList(Model.Tanks, "Name", "Name"))">
+            <option value="">SelectTank</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Engine</label>
+        <select class="form-control" asp-for="EngineName" asp-items="@(new SelectList(Model.Engines, "Name", "Name"))">
+            <option value="">Select Engine</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Launch Date</label>
+        <input type="datetime-local" class="form-control" asp-for="LaunchDate">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Return Date</label>
+        <input type="datetime-local" class="form-control" asp-for="ReturnDate">
+    </div>
+
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Edit</button>
+        <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Rocket">Delete</button>
+    </div>
+</form>

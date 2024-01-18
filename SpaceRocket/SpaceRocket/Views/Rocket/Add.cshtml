@@ -1,0 +1,89 @@
+﻿@model SpaceRocket.Models.RocketViewModel
+
+<h1 class="mt-5">Add Rocket</h1>
+
+<form method="post" action="Add">
+    <div class="row">
+        <div class="col">
+            <label for="Name" class="form-label">Name</label>
+            <input type="text" class="form-control" placeholder="Name" aria-label="Name" asp-for="Name">
+        </div>
+        <div class="col">
+            <label for="HeadModuleName" class="form-label">Head Module</label>
+            <select class="form-control" asp-for="HeadModuleName" asp-items="@(new SelectList(Model.HeadModules, "Name", "Name"))">
+                <option value="">Select Head Module</option>
+            </select>
+        </div>
+        <div class="col">
+            <label for="EngineName" class="form-label">Engine</label>
+            <select class="form-control" asp-for="EngineName" asp-items="@(new SelectList(Model.Engines, "Name", "Name"))">
+                <option value="">Select Engine</option>
+            </select>
+        </div>
+        <div class="col">
+            <label for="TankName" class="form-label">Tank</label>
+            <select class="form-control" asp-for="TankName" asp-items="@(new SelectList(Model.Tanks, "Name", "Name"))">
+                <option value="">Select Tank</option>
+            </select>
+        </div>
+        <div class="col">
+            <label for="LaunchDate" class="form-label">Launch Date</label>
+            <input type="datetime-local" class="form-control" placeholder="Launch Date" aria-label="Launch Date" asp-for="LaunchDate">
+        </div>
+        <div class="col">
+            <label for="ReturnDate" class="form-label">Return Date</label>
+            <input type="datetime-local" class="form-control" placeholder="Return Date" aria-label="Return Date" asp-for="ReturnDate">
+        </div>
+        <div class="col">
+            <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+    </div>
+</form>
+
+
+<h1 class="mt-5">Engine Table</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>HeadModule</th>
+            <th>Tank</th>
+            <th>Fuel</th>
+            <th>Engine</th>
+            <th>Launch</th>
+            <th>Return</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var rocket in Model.Rockets)
+        {
+            <tr>
+                <td>@rocket.Name</td>
+                <td>@rocket.HeadModule.Name</td>
+                <td>@rocket.Tank.Name</td>
+                <td>@rocket.Engine.FuelType.Name</td>
+                <td>@rocket.Engine.Name</td>
+                <td>@rocket.LaunchDate</td>
+                <td>@rocket.ReturnDate</td>
+                <td><a href="../Rocket/View/@rocket.Id"> View </a></td>
+                <td>
+                    @{
+                        var result = rocket.Engine.Thrust * Math.Log(
+                        (rocket.HeadModule.Weight + rocket.Engine.Weight + rocket.Tank.Weight
+                        + rocket.Engine.FuelType.WeightPerCubicMeter * rocket.Tank.Capacity) /
+                        (rocket.HeadModule.Weight + rocket.Engine.Weight + rocket.Tank.Weight));
+                        if (result > 7.91)
+                        {
+                            <text>Взлетит, V = @result.ToString("F2")</text>
+                        }
+                        else
+                        {
+                            <text>Не взлетит, V = @result.ToString("F2")</text>
+                        }
+                     }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

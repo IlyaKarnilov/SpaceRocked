@@ -1,0 +1,56 @@
+﻿@model SpaceRocket.Models.EngineViewModel
+
+<h1 class="mt-5">Add Engine</h1>
+
+<form method="post" action="Add">
+    <div class="row">
+        <div class="col">
+            <label for="Name" class="form-label">Name</label>
+            <input type="text" class="form-control" placeholder="Name" aria-label="Name" asp-for="Name">
+        </div>
+        <div class="col">
+            <label for="FuelType" class="form-label">Fuel Type</label>
+            <select class="form-control" asp-for="FuelType" asp-items="@(new SelectList(Model.Fuels, "Name", "Name"))">
+                <option value="">Select Fuel Type</option>
+            </select>
+        </div>
+        <div class="col">
+            <label for="Thrust" class="form-label">Crew Count</label>
+            <input type="number" class="form-control" placeholder="Crew Count" aria-label="Crew Count" asp-for="Thrust">
+        </div>
+        <div class="col">
+            <label for="Weight" class="form-label">Weight</label>
+            <input type="number" class="form-control" placeholder="Weight" aria-label="Weight" asp-for="Weight">
+        </div>
+        <div class="col">
+            <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+    </div>
+</form>
+
+
+<h1 class="mt-5">Engine Table</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>FuelType</th>
+            <th>Thrust</th>
+            <th>Weight</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var engine in Model.Engines)
+        {
+            <tr>
+                <td>@engine.Name</td>
+                <td>@engine.FuelType.Name</td>
+                <td>@engine.Thrust</td>
+                <td>@engine.Weight</td>
+                <td><a href="../Engine/View/@engine.Id"> View </a></td>
+            </tr>
+        }
+    </tbody>
+</table>

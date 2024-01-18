@@ -1,0 +1,46 @@
+﻿@model SpaceRocket.Models.TankViewModel
+
+<h1 class="mt-5">Add Tank</h1>
+
+<form method="post" action="Add">
+    <div class="row">
+        <div class="col">
+            <label for="Name" class="form-label">Name</label>
+            <input type="text" class="form-control" placeholder="Name" aria-label="Name" asp-for="Name">
+        </div>
+        <div class="col">
+            <label for="Capacity" class="form-label">Capacity</label>
+            <input type="number" class="form-control" placeholder="Capacity" aria-label="Capacity" asp-for="Capacity">
+        </div>
+        <div class="col">
+            <label for="Weight" class="form-label">Weight</label>
+            <input type="number" class="form-control" placeholder="Weight" aria-label="Weight" asp-for="Weight">
+        </div>
+        <div class="col">
+            <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+    </div>
+</form>
+
+<h1 class="mt-5">Head Module Table</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Capasity</th>
+            <th>Weight</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var tank in Model.Tanks)
+        {
+            <tr>
+                <td>@tank.Name</td>
+                <td>@tank.Capacity</td>
+                <td>@tank.Weight</td>
+                <td><a href="../Tank/View/@tank.Id"> View </a></td>
+            </tr>
+        }
+    </tbody>
+</table>
